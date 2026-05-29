@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=EB+Garamond:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#00208b",
+                    "on-secondary-fixed": "#151f00",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#4155bb",
+                    "clay-warmth": "#E8AD6E",
+                    "on-primary-fixed-variant": "#263ca2",
+                    "background": "#fff8f7",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#f7bb7a",
+                    "on-primary-container": "#7c90f9",
+                    "secondary": "#526526",
+                    "surface-bright": "#fff8f7",
+                    "moss-accent": "#C2D98C",
+                    "surface-variant": "#e8e1e1",
+                    "on-surface-variant": "#454652",
+                    "inverse-on-surface": "#f7efef",
+                    "surface-dim": "#e0d8d8",
+                    "inverse-surface": "#332f30",
+                    "on-tertiary-fixed": "#2c1700",
+                    "tertiary-container": "#482800",
+                    "on-error-container": "#93000a",
+                    "on-background": "#1e1b1b",
+                    "secondary-fixed": "#d4ec9d",
+                    "secondary-container": "#d4ec9d",
+                    "surface": "#fff8f7",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#586b2b",
+                    "surface-container-highest": "#e8e1e1",
+                    "outline": "#757684",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#eee6e6",
+                    "on-secondary-fixed-variant": "#3b4d0f",
+                    "primary-fixed": "#dee1ff",
+                    "surface-container-low": "#faf2f2",
+                    "tertiary-fixed": "#ffdcbc",
+                    "on-surface": "#1e1b1b",
+                    "error": "#ba1a1a",
+                    "ink-blue": "#00208B",
+                    "inverse-primary": "#bac3ff",
+                    "primary-fixed-dim": "#bac3ff",
+                    "secondary-fixed-dim": "#b9cf83",
+                    "gallery-white": "#FCF4F4",
+                    "on-tertiary-container": "#c38c50",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#663d06",
+                    "primary": "#001157",
+                    "tertiary": "#2b1600",
+                    "surface-container": "#f4ecec",
+                    "outline-variant": "#c5c5d5",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#001159"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "max-width": "1440px",
+                    "base": "8px",
+                    "margin-mobile": "24px",
+                    "margin-desktop": "80px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-sm": ["DM Sans"],
+                    "headline-lg-mobile": ["EB Garamond"],
+                    "body-md": ["DM Sans"],
+                    "body-lg": ["DM Sans"],
+                    "headline-md": ["EB Garamond"],
+                    "headline-xl": ["EB Garamond"],
+                    "headline-lg": ["EB Garamond"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                    "headline-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        .artwork-card:hover img {
+            transform: scale(1.02);
+        }
+        .canvas-bg {
+            background-image: radial-gradient(#e8e1e1 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+        body {
+            cursor: crosshair;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md selection:bg-ink-blue selection:text-white">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-max-width mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-ink-blue cursor-pointer" data-icon="menu">menu</span>
+<h1 class="font-headline-md text-headline-md tracking-widest text-on-background">Y. NAKAMURA</h1>
+</div>
+<nav class="hidden md:flex gap-10">
+<a class="font-label-sm text-label-sm text-ink-blue border-b border-ink-blue pb-1 tracking-widest" href="#">GALLERY</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-ink-blue transition-colors duration-300 tracking-widest" href="#">PODCAST</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-ink-blue transition-colors duration-300 tracking-widest" href="#">INFO</a>
+</nav>
+<button class="font-label-sm text-label-sm text-on-background border border-ink-blue px-6 py-2 hover:bg-ink-blue hover:text-white transition-all tracking-widest">SHOP</button>
+</div>
+</header>
+<main class="pt-32 pb-40">
+<!-- Hero Section -->
+<section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop mb-40">
+<div class="flex flex-col md:flex-row items-end gap-12">
+<div class="flex-1">
+<span class="font-label-sm text-label-sm text-ink-blue mb-4 block">EXHIBITION 2024</span>
+<h2 class="font-headline-xl text-headline-xl md:leading-[1.1] mb-8">
+                        The Synthesis of <br/>
+<span class="italic font-normal">Digital &amp; Physical</span>
+</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        A curated exploration of spatial dimensions, where VR painting meets traditional medium. Nakamura investigates the silent dialogue between the pixel and the pigment.
+                    </p>
+</div>
+<div class="w-full md:w-1/3 flex flex-col gap-4">
+<div class="h-[1px] bg-outline-variant w-full"></div>
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm">WORKS SHOWN</span>
+<span class="font-label-sm text-label-sm">42 PIECES</span>
+</div>
+</div>
+</div>
+</section>
+<!-- VR Painting Section: High-End Bento Grid -->
+<section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop mb-60">
+<div class="flex items-center gap-4 mb-12">
+<div class="w-8 h-8 rounded-full bg-ink-blue flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[18px]" data-icon="view_in_ar">view_in_ar</span>
+</div>
+<h3 class="font-headline-md text-headline-md">VR Painting: Spatial Strokes</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Featured Piece -->
+<div class="md:col-span-8 group cursor-pointer">
+<div class="relative overflow-hidden bg-surface-container-low mb-6">
+<img class="w-full aspect-[16/10] object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A sprawling immersive VR painting displayed in a high-end digital gallery. The artwork features complex three-dimensional ribbons of deep ink-blue light floating in a void of pure gallery white. Soft atmospheric lighting illuminates the curves of the digital brushstrokes, creating a sense of immense scale and technological elegance. The overall mood is futuristic, serene, and deeply sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRYda4-6KRO3vFuk94G2toHrM9Mef6-Aoylj_qdGTG21eSyl8cL0NmOZTgi7DDy07wtx8JIguQnBmn0G14x3-kS2-eAby9N-6Tb_cBMuewFTAYmSRvCPiq_wuoSKI1BtwqH3VK7Efm6Jm_7QMu27pWtzDmXaxhQxdh3yh_bhtpLeiufBGrw94fFWEG8chWu5t5iof6bE6MUOFVCkXxHT8NDSGYMCki_b53h0HUKLHDeM_NXLi1xtSFW8CFFHjiKIVIe7yU1MrPSF0"/>
+</div>
+<div class="flex justify-between border-t border-outline-variant pt-4">
+<div>
+<p class="font-body-md font-bold text-on-background">NEURAL TIDES 01</p>
+<p class="font-label-sm text-on-surface-variant">VR MEDIUM / IMMERSIVE SPATIAL DATA</p>
+</div>
+<span class="font-label-sm text-ink-blue">2024</span>
+</div>
+</div>
+<!-- Secondary Pieces -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden bg-surface-container-low mb-4">
+<img class="w-full aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A detailed digital close-up of a VR painting stroke. The texture resembles liquid silk and ink-blue glass, reflecting a soft ambient light. The background is a clean, minimalist off-white surface with a subtle grain texture. The composition is highly abstract and balanced, emphasizing the fluidity of digital art within a structured gallery environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdcWYHW8fhgFeAqhKpmzNjp2CSoXTN5Iun9tt0Gw1pq_hiX3p_UVYnGKoy3_S0ytrsI9Y1LBfYcdn3lwKUubDMEn6dbTemUenrOnlOED-0G0MsYwwb7bVb0bllNTGxk59o8HbQ4qQ9dKYWs88KAwfxOlNFySm07cYY8m8PTeEL_QxQ9vCrhLgJi2uLrrREdfFiq1yd2m3faYZKKnAM8RoGyX49nFT-ViTOBGakl-F62mnG0kyC16ZRYpvf4PwBKlyt8yX1rJW8vjM"/>
+</div>
+<p class="font-label-sm text-label-sm">FLUID DATA V.2</p>
+</div>
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden bg-surface-container-low mb-4">
+<img class="w-full aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Abstract geometric shapes in a digital painting, featuring sharp edges and soft gradients of blue and grey. The lighting is diffused and high-key, creating a clean modern look. The style is minimalist and corporate, reflecting a high-end art portfolio. The mood is intellectual and calm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALoudwoaiQOFXk_5_pfOMcRINgmX_kQSM9MjcxKkGshx2RaCThH_yLAMvWEsLi5GP4QrT3DcCXlIQDpEouqMjC6vZXrMorjN8a2RWRMPTslGgjg2y08SNHVs7obVF47lleYhNgAd92rJkuyER_0Tymsta4F2qPQt_mfAiHeZXEoRApLWtGskYLooCyD37eGXEjxVRLoNNhcYmu5ON7B44HXgbiLflAC3EHuhW5Xil2DvSgwoDjciZEVwtzpf_O-s9cq7Unx6243E8"/>
+</div>
+<p class="font-label-sm text-label-sm">ARCHITECTURAL ECHO</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Series Works: Historical Echoes (Clean Asymmetric Grid) -->
+<section class="bg-surface-container-lowest py-40 mb-60">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="max-w-2xl mb-24">
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-[0.2em] mb-4 block">SERIES</span>
+<h3 class="font-headline-lg text-headline-lg mb-6">Historical Echoes</h3>
+<p class="font-body-md text-on-surface-variant">A series that reinterprets classical silhouettes through the lens of modern abstraction. Each piece is a meditation on the persistence of form across centuries.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-gutter items-start">
+<!-- Column 1 -->
+<div class="flex-1 mt-20">
+<div class="artwork-card group mb-20">
+<img class="w-full aspect-[3/4] object-cover mb-6 transition-transform duration-500" data-alt="A sophisticated minimalist painting featuring a single gestural ink-blue stroke on a textured paper-white background. The lighting is soft and even, highlighting the subtle paper grain. The style is reminiscent of contemporary museum art, clean and intellectual. The mood is quiet and contemplative, utilizing wide negative space to emphasize the central artwork." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANJUkRgRbv6M4OGi1sq7likcr4YuI7BGanRQrh_G7pUhF1mOFE56VRyzF7xPpjmJ-dXI-ldp0b3GYr2PeeX3o3DHvGb_VuJxUjh-LBSM44rfS35QoOw1kxK5DK6x9qdTwkOGSa0rONm7ZbgE09AqzZ_i_Z5reWaYpWt3tZLOnIFWuBUhimCjcWRfO-V1SZ_OTo2zG_eI-Xt1BRiIT__W4JUYiOMY6U7m_LTCj-OtJ29lhrxiDq4vzciTjGE3RGDXq7Wxsl_QXVxi0"/>
+<div class="space-y-1">
+<h4 class="font-label-sm text-on-background">FRAGMENT I</h4>
+<p class="text-[11px] font-label-sm text-on-surface-variant">MIXED MEDIA ON CANVAS, 2023</p>
+</div>
+</div>
+<div class="artwork-card group">
+<img class="w-full aspect-[4/5] object-cover mb-6 transition-transform duration-500" data-alt="An abstract vertical painting with layered shades of clay-warmth and ink-blue. The composition is balanced and elegant, with a focus on color harmony and subtle texture. The scene is presented as if hanging on a pristine, minimalist gallery wall with soft overhead spotlighting. The aesthetic is modern, corporate, and highly curated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuDkmj3HUqI7axzOts8EixxgiJ50hBe0kXOqgyMGBY3aO2EyzkcUjHvu9FEDkU9EzzTbR29Ya1w4vsJ0TIqBOKWgVBsj8oD_Ev1wenrE9UyshAUcukmwTQYcVQl8kuKo1FcQS_H8vwKCKtouDnbiy72Ev2r11jDzClgoEL95j9I-Cpy33YNIDG-3Aa-YD2IgTNp_W2C4fjrxagVLpggQ3butQe26c3ftXeBMHSLyU3NXLSst8bfs-k3p5ruhJ3nEDo9W5B1x8tw10"/>
+<div class="space-y-1">
+<h4 class="font-label-sm text-on-background">RESONANCE III</h4>
+<p class="text-[11px] font-label-sm text-on-surface-variant">ACRYLIC AND DIGITAL PRINT, 2023</p>
+</div>
+</div>
+</div>
+<!-- Column 2 (Offset) -->
+<div class="flex-1">
+<div class="artwork-card group mb-20">
+<img class="w-full aspect-square object-cover mb-6 transition-transform duration-500" data-alt="A minimalist artwork showcasing geometric shapes in shades of moss-accent and deep blue. The lighting is bright and airy, consistent with a high-end digital gallery setting. The composition is clean, with significant breathing room around the central elements. The overall look is professional, modern, and intellectual." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4wbiDl6BjhNQDDyXB4A52_DyB1boFSxY_HaBk3nLoKsXj2Z-dgXT8X5P0OnGG_5s2pziwp7SrOSrGS7q7LkuxWrnrKnF02agYDTd8d_j4oj0VvSfzviJ4VeNzUJuRqxhCNOhmaFUbMhUI35UzSkaodxGwE_2is3bTalts1ZG7PsmZ9OJZqPDUqaDpNODLJmda7GmVLFBNBYx3jJRme0zbuPcfLPxGDI-K4pS56q00pmvhUPiO4lNc_J-4mcOEnDkppk-B-3BPWvU"/>
+<div class="space-y-1">
+<h4 class="font-label-sm text-on-background">GEOMETRY OF MEMORY</h4>
+<p class="text-[11px] font-label-sm text-on-surface-variant">DIGITAL ARCHIVAL PRINT, 2024</p>
+</div>
+</div>
+<div class="artwork-card group">
+<div class="aspect-[4/6] bg-ink-blue/5 p-12 flex flex-col justify-center items-center text-center border border-outline-variant/30 mb-6">
+<span class="material-symbols-outlined text-ink-blue mb-4" data-icon="book_5" style="font-size: 48px;">book_5</span>
+<h4 class="font-headline-md mb-2">The Archive</h4>
+<p class="font-body-md text-on-surface-variant mb-8 px-6">Access the full catalog of Historical Echoes in our seasonal publication.</p>
+<button class="font-label-sm text-label-sm border-b border-ink-blue text-ink-blue pb-1 hover:opacity-50 transition-opacity">REQUEST CATALOGUE</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Hand-painted Works: Masonry Layout -->
+<section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop mb-40">
+<div class="flex justify-between items-end mb-20">
+<div>
+<h3 class="font-headline-md text-headline-md mb-2">Hand-painted Studies</h3>
+<p class="font-body-md text-on-surface-variant">Raw texture and the tactile nature of physical medium.</p>
+</div>
+<div class="flex gap-4">
+<span class="p-2 border border-outline-variant cursor-pointer hover:bg-ink-blue hover:text-white transition-colors material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+<span class="p-2 border border-outline-variant cursor-pointer hover:bg-ink-blue hover:text-white transition-colors material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<div class="columns-1 md:columns-3 gap-gutter space-y-gutter">
+<div class="artwork-card break-inside-avoid group cursor-pointer">
+<img class="w-full grayscale hover:grayscale-0 transition-all duration-500 mb-4" data-alt="A close-up of a hand-painted canvas featuring thick impasto brushstrokes in shades of off-white and charcoal. The lighting is directional, casting soft shadows that emphasize the physical texture of the paint. The aesthetic is raw yet refined, following a minimalist and corporate modern hybrid. The atmosphere is quiet and focused on the materiality of the art." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOTfWljW8Obo8zK4lllMgMDdbOjDnb3JD6STDNKWeEcCkzwR3b4FGLg-fjfl7nDnSg8g1MvM5qJxkanYF7sDW1RW4PnjDOHW_KUzQ64ogyg39Vn0PrFdDTBSKyX7NPybqGAxLiS6DUeK6cN5JYDyrpXS23xWD_0C_E3qzq0mhtWx9N0C_39d2kVK6fPKcfoEruuUacoCWVdFcUyBe0ypeKDn2CCjP1ZMgJamdgmH6FkRrsCDUBvnQ2C2yqwGMb8hqLRivJj44JwkU"/>
+<p class="font-label-sm text-on-background">STUDY OF LIGHT 04</p>
+<p class="text-[10px] font-label-sm text-on-surface-variant">OIL ON LINEN</p>
+</div>
+<div class="artwork-card break-inside-avoid group cursor-pointer">
+<img class="w-full grayscale hover:grayscale-0 transition-all duration-500 mb-4" data-alt="A minimalist painting of a landscape reduced to its basic horizontal forms. The colors are a palette of ink-blue, grey, and gallery-white. The lighting is bright and diffuse, creating a clean, airy feeling. The style is contemporary and intellectual, intended for high-end collectors. The mood is one of profound stillness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq8tYIyxjMo0NqUUjPS0GAo4gNOBQVfr_KNGZzFNneWP4dZ9l9cj-Po9BeI6NYqQAuA5Z3j309tyRilmbTmP2W0k2Hf5jhtuKN81_OfwImU0gadFB19yorKSsIrC1ZgQo2MukiLIN8HNf7UFlHbn4eEYUS0trSQWCklZfPt1AZR3h0wa35_GdyheIG6_ZrKI4EfWGntkETR14DQ7dYDTmfXENqSpPUtKRWT9PKQjjNuT-oo_DJR500vvpqVSvbkoX1ZWLGzJ0FymA"/>
+<p class="font-label-sm text-on-background">HORIZON LINE</p>
+<p class="text-[10px] font-label-sm text-on-surface-variant">WATERCOLOR ON COTTON PAPER</p>
+</div>
+<div class="artwork-card break-inside-avoid group cursor-pointer">
+<img class="w-full grayscale hover:grayscale-0 transition-all duration-500 mb-4" data-alt="A powerful abstract painting with bold, black gestural marks on a cream-white background. The lighting is crisp, highlighting the contrast and the sharp edges of the paint. The composition is dynamic yet balanced, fitting perfectly within a modern minimalist gallery. The aesthetic is sophisticated and corporate, emphasizing artistic precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSjQvkS0f7TvpmJH4mZGpAPvz-jf1xP3qObgPLBGoVuEmPCuRPHFO8vkTJbrcpBfvXsvfAmI6y_iNwuEz9U8tpcWYwmu4_UrmMaOddjKoqfKzRpuQCBqG9niYxMJGgpm6MTaXvJcD3b3eQjau-at9F6R0mBOEWRkOSoZR_QQyqkk-KLlcguMBveoRVT1KPsW20BgtZk3_Q1Xg336yl2N1WzwaBkFaDppt3QWyvwr-gRlPtIsi8CbopnxtBT9JgtZKCdGAaq9Ytn8I"/>
+<p class="font-label-sm text-on-background">UNSTRUCTURED SILENCE</p>
+<p class="text-[10px] font-label-sm text-on-surface-variant">INK ON WASHI</p>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop mb-40 text-center">
+<div class="border-y border-outline-variant py-24 px-8">
+<h3 class="font-headline-lg text-headline-lg mb-8">Acquire a Piece of the Future</h3>
+<p class="font-body-lg text-on-surface-variant mb-12 max-w-xl mx-auto">Selected works from the 2024 collection are now available for private acquisition. Inquire for our current catalog.</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+<button class="bg-ink-blue text-white px-10 py-4 font-label-sm text-label-sm hover:opacity-90 transition-opacity">VIEW AVAILABLE WORKS</button>
+<button class="border border-ink-blue text-ink-blue px-10 py-4 font-label-sm text-label-sm hover:bg-ink-blue hover:text-white transition-all">CONTACT CURATOR</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="mt-40 bg-background border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-12 max-w-max-width mx-auto space-y-6 md:space-y-0">
+<h2 class="font-headline-md text-on-background tracking-widest">Y. NAKAMURA</h2>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-ink-blue underline transition-all" href="#">ARCHIVE</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-ink-blue underline transition-all" href="#">CONTACT</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-ink-blue underline transition-all" href="#">TERMS</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-ink-blue underline transition-all" href="#">PRIVACY</a>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Y. NAKAMURA. ALL RIGHTS RESERVED.</p>
+</div>
+</footer>
+<!-- Mobile Bottom Nav -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-background border-t border-outline-variant">
+<div class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm tracking-tighter">HOME</span>
+</div>
+<div class="flex flex-col items-center justify-center text-ink-blue font-bold scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="palette">palette</span>
+<span class="font-label-sm text-label-sm tracking-tighter">GALLERY</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-label-sm text-label-sm tracking-tighter">SHOP</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+<span class="font-label-sm text-label-sm tracking-tighter">INFO</span>
+</div>
+</nav>
+<script>
+        // Subtle micro-interaction for images
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('mousemove', (e) => {
+                const { left, top, width, height } = img.getBoundingClientRect();
+                const x = (e.clientX - left) / width;
+                const y = (e.clientY - top) / height;
+                img.style.transformOrigin = `${x * 100}% ${y * 100}%`;
+            });
+        });
+
+        // Sticky header opacity on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-sm');
+            } else {
+                header.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body></html>

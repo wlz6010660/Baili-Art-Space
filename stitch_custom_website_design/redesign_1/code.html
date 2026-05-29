@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Y. NAKAMURA | Splash Screen</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts for the Brand and Script -->
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "primary-container": "#00208b",
+                "on-secondary-fixed": "#151f00",
+                "surface-container-lowest": "#ffffff",
+                "surface-tint": "#4155bb",
+                "clay-warmth": "#E8AD6E",
+                "on-primary-fixed-variant": "#263ca2",
+                "background": "#fff8f7",
+                "on-error": "#ffffff",
+                "tertiary-fixed-dim": "#f7bb7a",
+                "on-primary-container": "#7c90f9",
+                "secondary": "#526526",
+                "surface-bright": "#fff8f7",
+                "moss-accent": "#C2D98C",
+                "surface-variant": "#e8e1e1",
+                "on-surface-variant": "#454652",
+                "inverse-on-surface": "#f7efef",
+                "surface-dim": "#e0d8d8",
+                "inverse-surface": "#332f30",
+                "on-tertiary-fixed": "#2c1700",
+                "tertiary-container": "#482800",
+                "on-error-container": "#93000a",
+                "on-background": "#1e1b1b",
+                "secondary-fixed": "#d4ec9d",
+                "secondary-container": "#d4ec9d",
+                "surface": "#fff8f7",
+                "on-tertiary": "#ffffff",
+                "on-secondary-container": "#586b2b",
+                "surface-container-highest": "#e8e1e1",
+                "outline": "#757684",
+                "on-secondary": "#ffffff",
+                "surface-container-high": "#eee6e6",
+                "on-secondary-fixed-variant": "#3b4d0f",
+                "primary-fixed": "#dee1ff",
+                "surface-container-low": "#faf2f2",
+                "tertiary-fixed": "#ffdcbc",
+                "on-surface": "#1e1b1b",
+                "error": "#ba1a1a",
+                "ink-blue": "#00208B",
+                "inverse-primary": "#bac3ff",
+                "primary-fixed-dim": "#bac3ff",
+                "secondary-fixed-dim": "#b9cf83",
+                "gallery-white": "#FCF4F4",
+                "on-tertiary-container": "#c38c50",
+                "on-primary": "#ffffff",
+                "on-tertiary-fixed-variant": "#663d06",
+                "primary": "#001157",
+                "tertiary": "#2b1600",
+                "surface-container": "#f4ecec",
+                "outline-variant": "#c5c5d5",
+                "error-container": "#ffdad6",
+                "on-primary-fixed": "#001159"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "max-width": "1440px",
+                "base": "8px",
+                "margin-mobile": "24px",
+                "margin-desktop": "80px",
+                "gutter": "24px"
+            },
+            "fontFamily": {
+                "label-sm": ["DM Sans", "sans-serif"],
+                "headline-lg-mobile": ["EB Garamond", "serif"],
+                "body-md": ["DM Sans", "sans-serif"],
+                "body-lg": ["DM Sans", "sans-serif"],
+                "headline-md": ["EB Garamond", "serif"],
+                "headline-xl": ["EB Garamond", "serif"],
+                "headline-lg": ["EB Garamond", "serif"]
+            },
+            "fontSize": {
+                "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                "headline-xl": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                "headline-lg": ["40px", { "lineHeight": "48px", "fontWeight": "400" }]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: #fff8f7; /* Matching theme background */
+        }
+
+        .typewriter-cursor::after {
+            content: '|';
+            animation: blink 1s step-end infinite;
+            margin-left: 2px;
+            color: #00208B; /* ink-blue */
+        }
+
+        @keyframes blink {
+            from, to { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .bg-splash {
+            background-image: url('https://lh3.googleusercontent.com/aida/ADBb0uhhTMuPwXhMfZqrxoR4YRqLQF1KRo_kCL0rcq18pVG1G0H6bVhEs-155IFaTj0bpSlhnYhU1NxJXN8oOKYDc52RP3zGSwydnpogpd8a3nZQyFNvaonJQIDo_W04oq95U4x45OKZS9RTZt7QQQlP4agfA6ce9RoDBgpBfzgicIvjoW1VJKSmMNv7GWJ8xLO-yVt7AVcf_6ttTxtcDpX1cGBtmyNsbqf60kaDtpxClwtOZ6djYbFKccSFVag');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .floating-action {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-hidden select-none">
+<!-- Splash Content Wrapper -->
+<main class="relative h-screen w-screen flex items-center justify-center">
+<!-- Background Artistic Illustration -->
+<div class="bg-splash"></div>
+<!-- Glassmorphism/Vignette Overlay for Legibility -->
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/40 pointer-events-none"></div>
+<!-- Central Content Canvas -->
+<div class="relative z-10 flex flex-col items-center text-center max-w-2xl px-margin-mobile md:px-margin-desktop">
+<!-- Typewriter Text Container -->
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background typewriter-cursor tracking-tight mb-20 leading-relaxed" id="typewriter">
+<!-- Text will be injected by JS -->
+</h1>
+<!-- Minimal "Click to Enter" Prompt -->
+<div class="fade-in opacity-0 mt-20 flex flex-col items-center cursor-pointer group" id="enter-prompt" onclick="location.href='#'" style="animation-delay: 3s;">
+<p class="font-label-sm text-label-sm text-ink-blue tracking-[0.3em] mb-4 group-hover:opacity-70 transition-opacity">
+                    CLICK TO ENTER
+                </p>
+<div class="w-[1px] h-12 bg-ink-blue/30 relative overflow-hidden group-hover:bg-ink-blue/60 transition-colors">
+<div class="absolute top-0 left-0 w-full h-1/2 bg-ink-blue floating-action"></div>
+</div>
+</div>
+</div>
+<!-- Top Brand Identity (Corner Anchor) -->
+<div class="absolute top-10 left-1/2 -translate-x-1/2 md:left-margin-desktop md:translate-x-0 z-20">
+<span class="font-headline-md text-headline-md tracking-[0.2em] text-on-background mix-blend-multiply opacity-80">
+                Y. NAKAMURA
+            </span>
+</div>
+<!-- Bottom Social/Info Indicator (Subtle Decoration) -->
+<div class="absolute bottom-10 right-margin-desktop hidden md:flex flex-col items-end gap-2 opacity-40 z-20">
+<span class="font-label-sm text-[10px] tracking-widest text-on-background">TOKYO / CURATED GALLERY</span>
+<span class="font-label-sm text-[10px] tracking-widest text-on-background">EST. 2024</span>
+</div>
+</main>
+<script>
+        // Typewriter Animation Logic
+        const text = "我在人间流浪，翻看灵魂的颜色";
+        const typewriterElement = document.getElementById('typewriter');
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                typewriterElement.innerHTML += text.charAt(index);
+                index++;
+                // Slight randomization for natural feel
+                setTimeout(type, 150 + Math.random() * 100);
+            } else {
+                // Remove cursor animation once finished typing
+                typewriterElement.classList.remove('typewriter-cursor');
+            }
+        }
+
+        // Start animation after a brief initial pause
+        window.addEventListener('load', () => {
+            setTimeout(type, 800);
+        });
+
+        // Simple enter interaction (Haptic/Visual feedback simulation)
+        document.getElementById('enter-prompt').addEventListener('mousedown', function() {
+            this.style.transform = 'scale(0.98)';
+        });
+        document.getElementById('enter-prompt').addEventListener('mouseup', function() {
+            this.style.transform = 'scale(1)';
+        });
+    </script>
+</body></html>

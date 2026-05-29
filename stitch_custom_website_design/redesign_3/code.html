@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Y. NAKAMURA - 历史之音系列</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&amp;family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#00208b",
+                    "on-secondary-fixed": "#151f00",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#4155bb",
+                    "clay-warmth": "#E8AD6E",
+                    "on-primary-fixed-variant": "#263ca2",
+                    "background": "#fff8f7",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#f7bb7a",
+                    "on-primary-container": "#7c90f9",
+                    "secondary": "#526526",
+                    "surface-bright": "#fff8f7",
+                    "moss-accent": "#C2D98C",
+                    "surface-variant": "#e8e1e1",
+                    "on-surface-variant": "#454652",
+                    "inverse-on-surface": "#f7efef",
+                    "surface-dim": "#e0d8d8",
+                    "inverse-surface": "#332f30",
+                    "on-tertiary-fixed": "#2c1700",
+                    "tertiary-container": "#482800",
+                    "on-error-container": "#93000a",
+                    "on-background": "#1e1b1b",
+                    "secondary-fixed": "#d4ec9d",
+                    "secondary-container": "#d4ec9d",
+                    "surface": "#fff8f7",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#586b2b",
+                    "surface-container-highest": "#e8e1e1",
+                    "outline": "#757684",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#eee6e6",
+                    "on-secondary-fixed-variant": "#3b4d0f",
+                    "primary-fixed": "#dee1ff",
+                    "surface-container-low": "#faf2f2",
+                    "tertiary-fixed": "#ffdcbc",
+                    "on-surface": "#1e1b1b",
+                    "error": "#ba1a1a",
+                    "ink-blue": "#00208B",
+                    "inverse-primary": "#bac3ff",
+                    "primary-fixed-dim": "#bac3ff",
+                    "secondary-fixed-dim": "#b9cf83",
+                    "gallery-white": "#FCF4F4",
+                    "on-tertiary-container": "#c38c50",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#663d06",
+                    "primary": "#001157",
+                    "tertiary": "#2b1600",
+                    "surface-container": "#f4ecec",
+                    "outline-variant": "#c5c5d5",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#001159"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "max-width": "1440px",
+                    "base": "8px",
+                    "margin-mobile": "24px",
+                    "margin-desktop": "80px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-sm": ["DM Sans", "sans-serif"],
+                    "headline-lg-mobile": ["EB Garamond", "serif"],
+                    "body-md": ["DM Sans", "sans-serif"],
+                    "body-lg": ["DM Sans", "sans-serif"],
+                    "headline-md": ["EB Garamond", "serif"],
+                    "headline-xl": ["EB Garamond", "serif"],
+                    "headline-lg": ["EB Garamond", "serif"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                    "headline-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #fff8f7; -webkit-font-smoothing: antialiased; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .gallery-canvas { max-width: 1440px; margin: 0 auto; }
+        .stagger-in { animation: staggerIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+        @keyframes staggerIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .glass-panel { background: rgba(255, 248, 247, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(0, 32, 139, 0.05); }
+    </style>
+</head>
+<body class="font-body-md text-on-background selection:bg-ink-blue selection:text-white">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-[100] bg-background border-b border-outline-variant transition-transform duration-300" id="top-app-bar">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-max-width mx-auto">
+<div class="flex items-center gap-4 cursor-pointer hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-ink-blue">menu</span>
+</div>
+<a class="font-headline-md text-headline-md tracking-widest text-on-background" href="/">Y. NAKAMURA</a>
+<div class="flex items-center gap-8">
+<nav class="hidden md:flex gap-6">
+<a class="font-label-sm text-label-sm text-ink-blue border-b border-ink-blue pb-1" href="#">GALLERY</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-ink-blue transition-colors duration-300" href="#">ARCHIVE</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-ink-blue transition-colors duration-300" href="#">INFO</a>
+</nav>
+<button class="font-label-sm text-label-sm text-ink-blue cursor-pointer transition-opacity hover:opacity-70">SHOP</button>
+</div>
+</nav>
+</header>
+<main class="gallery-canvas pt-32 pb-40 px-margin-mobile md:px-margin-desktop">
+<!-- Hero Section: Artwork Display -->
+<section class="mb-32">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<!-- Title & Meta (Mobile) -->
+<div class="md:hidden mb-8 stagger-in">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-background mb-2">历史之音系列 - 某某篇</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Digital Masterpiece, 2024</p>
+</div>
+<!-- Main Artwork Canvas -->
+<div class="md:col-span-7 lg:col-span-8 stagger-in delay-1">
+<div class="relative overflow-hidden group">
+<img alt="Historical echoes artwork" class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-105 shadow-sm" src="https://lh3.googleusercontent.com/aida/ADBb0ui7FYCNHLfhHZiQYefbrVq8fcgne7YVLLIAiR97In5d0tbsd_oJha2GvFDyJSgO_gtpH42ZuJSSTjx8hXorqEI5ZYiLOdZM8ap0ws4eBZeL6cazGvME2OyoWCqUKwxDwgJt_d9Lz4TYiq7cnpyAVZzM4mOU_nCIfd1eyY86del1FPrjPb2h6yKqcykH2f2vAF70GU_nzrSlovXThHDbH0G8cqcwr8QnrDKGSnwcPWwk5bZU__7I_CcO64U"/>
+<div class="absolute inset-0 bg-ink-blue/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+</div>
+<div class="mt-4 flex justify-between items-center text-on-surface-variant">
+<p class="font-label-sm text-label-sm">PRESS TO ENLARGE</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-ink-blue transition-colors">zoom_in</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-ink-blue transition-colors">fullscreen</span>
+</div>
+</div>
+</div>
+<!-- Side Panel: Info & Actions -->
+<div class="md:col-span-5 lg:col-span-4 md:pl-10 space-y-12 stagger-in delay-2">
+<div class="hidden md:block">
+<h1 class="font-headline-lg text-headline-lg text-on-background mb-4">历史之音系列 - 某某篇</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Y. Nakamura • Echoes of History</p>
+</div>
+<div class="space-y-6 pt-6 border-t border-outline-variant">
+<div class="flex justify-between items-end">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-1">CURRENT VALUATION</p>
+<p class="font-headline-md text-headline-md text-ink-blue">¥12,800.00</p>
+</div>
+<span class="font-label-sm text-label-sm text-moss-accent px-3 py-1 bg-moss-accent/10 rounded-full">CERTIFIED</span>
+</div>
+<button class="w-full py-6 bg-ink-blue text-white font-label-sm text-label-sm tracking-widest hover:opacity-90 active:scale-[0.98] transition-all flex justify-center items-center gap-2 group">
+<span>带走这幅画</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">shopping_cart</span>
+</button>
+<p class="text-center font-label-sm text-[10px] text-on-surface-variant">SECURE CHECKOUT &amp; INTERNATIONAL SHIPPING AVAILABLE</p>
+</div>
+<div class="grid grid-cols-2 gap-8 py-8 border-y border-outline-variant">
+<div>
+<h4 class="font-label-sm text-label-sm text-on-surface-variant mb-2">FORMAT</h4>
+<p class="font-body-md text-body-md">High-Giclee Print on Archival Canvas</p>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm text-on-surface-variant mb-2">DIMENSIONS</h4>
+<p class="font-body-md text-body-md">120 x 180 cm<br/>(47.2 x 70.8 in)</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-ink-blue">verified_user</span>
+<p class="font-label-sm text-label-sm leading-relaxed">Included with physical delivery: Signed Certificate of Authenticity and a limited edition catalog of the "Echoes" series.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Narrative Section: The Story -->
+<section class="max-w-4xl mx-auto mb-40 stagger-in delay-3">
+<div class="space-y-12">
+<div class="flex flex-col md:flex-row gap-8 items-baseline">
+<h2 class="font-label-sm text-label-sm text-ink-blue whitespace-nowrap uppercase tracking-[0.2em]">01. THE STORY</h2>
+<div class="h-px bg-outline-variant flex-grow hidden md:block"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<div class="font-body-lg text-body-lg leading-relaxed text-on-background italic">
+                        "这一刻，时间仿佛在画布上凝固。破碎的陶罐与青铜利剑，不再是沉睡的古物，而是跃动的音符，奏响着穿越千年的历史共鸣。"
+                    </div>
+<div class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<p class="mb-6">《历史之音系列 - 某某篇》是中村悦（Y. Nakamura）对物质性与非物质记忆的一次深刻探讨。通过对古代文物的超现实重构，艺术家打破了考古学中冷峻的时间轴，转而用流动的光影和烟雾状的纹理，捕捉文明更迭时的精神余晖。</p>
+<p>每一件漂浮的器物都经过精密的手工数字化重塑，其纹理参考了真实的青铜时代与铁器时代遗物。在这幅作品中，碎片不仅是破坏的象征，更是新生与重组的基石。</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Details Grid (Bento Style) -->
+<section class="mb-40">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter h-auto md:h-[600px]">
+<div class="md:col-span-8 relative overflow-hidden group">
+<img class="w-full h-full object-cover grayscale-[0.2] transition-transform duration-700 group-hover:scale-110" data-alt="A macro detail shot of an oil painting surface showing rich texture, impasto brushstrokes, and a sophisticated palette of deep blues and warm umber. The lighting is focused and dramatic, highlighting the sculptural quality of the paint on canvas within a minimalist museum environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbKOFC9-Pt7fTQiLQS7nznjlovPQJIGrnuz-CnUnFAuq0ueJ89EPv8wVeKf3hqQpL_USAjmsbs0nUH6-M96AeMV9tNAaPBSK9BMO2DCpzKkuCDreN99ozSuEn9RfCExrZfWYUhivEWHw9KvPzyWAxs7eHNK4kZNDO069E2lWZQRoArodWzYqR8T6CiRdiGsVP-LkW3Sva8OLi39fAaAxfW4BTXqzVM8nKg65UEHv6XdhfFRY2g86A2zgDWQSXHl59bvAyN-YT1zPE"/>
+<div class="absolute bottom-8 left-8 text-white z-10">
+<p class="font-label-sm text-label-sm mb-2">TEXTURE DETAIL</p>
+<h3 class="font-headline-md text-headline-md"> archival grade fidelity</h3>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+</div>
+<div class="md:col-span-4 grid grid-rows-2 gap-gutter">
+<div class="bg-surface-container border border-outline-variant p-8 flex flex-col justify-between group hover:bg-ink-blue hover:text-white transition-all">
+<span class="material-symbols-outlined text-[40px]">architecture</span>
+<div>
+<h4 class="font-label-sm text-label-sm mb-2">CURATION</h4>
+<p class="font-body-md">Designed for gallery environments with high-key lighting.</p>
+</div>
+</div>
+<div class="relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A wide shot of a modern, white-walled art gallery featuring large scale minimalist paintings. High-end collectors in dark, sophisticated clothing are contemplating the work under soft, diffuse spotlighting. The floor is polished concrete reflecting the bright, airy atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATlwJ8v_Zlb1LbYpnqaQ2F6GcIKUW9JgiaqpBcQPGKxd0dT9S4jIc8V5wS--JyW9umsgDX9EPeN9W4cpbq4x5KQEaXvVW4ciZzCEoGoByit143bQUu4PN7QWKZ2MfcSjhVf3bWp8bFgFD2xQvct6KEDb5qo4xhuOflT8EA5bosg0ApXL-6XQS_SuHj7GHnmxQwGoFq8dBeO2J-FmVOstaNqY70utFpA5y8HVSKAdQMgFbS7P9evMogQK6-FITX7CgOhVxJVsuNl00"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-all"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Related Works Section -->
+<section class="pt-24 border-t border-outline-variant">
+<div class="flex justify-between items-end mb-16">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-2">DISCOVER MORE</p>
+<h2 class="font-headline-lg text-headline-lg">Related Works</h2>
+</div>
+<a class="font-label-sm text-label-sm text-ink-blue flex items-center gap-2 group" href="#">
+                    VIEW COLLECTION <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Related Item 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden mb-6">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A minimalist abstract painting featuring sweeping gestures of ink blue and clay warm tones against a textured off-white background. The composition is airy and sophisticated, evocative of a modern gallery aesthetic with light mode lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtFU4twn48e7sXmoyAkS_Tqpzl7fKjLW_mGtFXPmevWgL1Cf5jHyPm71vzzggbFW_UUOfMlj0Rv5PZcEr_357D-rYQ-elHhMbBjowtGurftO2UD665mTuhO41hBIkA1GXW0KUM9-N93N-5h0A8kC8UQW498kjrSpuklR3s-GQJhYSpWxLGLPI7xf7kS2by81si9y5AtFSISMIpkminKjeI5CwftAhbqfEsPPJ3y_-HLEVMh4OYL97hRVOgCEwh0gSm7xMUlacLEqk"/>
+</div>
+<h4 class="font-headline-md text-headline-md mb-1">沉默的回响</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">EPISODE II - THE VOID</p>
+</div>
+<!-- Related Item 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden mb-6">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A contemporary art piece with layered translucent geometric shapes in moss accent and clay warmth colors. The lighting is soft and high-key, creating a sense of depth and tranquility typical of a digital gallery environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_z1eFe5TaWwuzrTy6ZzCeVR1y4Ck_2yQD37Q3pG9MEiFWiKVCPyghFaNnVPFoQ2RkMs8KIc--HfJBR6_gKuSdw_nrwlDxn3LKUftq-2tLEvVKRIji8VZEzz1QCwvrLwnWd0waBXdiLyy5LAwenr7BYrKhADIgzcR64CtHatxeuV4JJLZULM62WvLDJIGE0OgWK7yiS7yHywyC-JnToHbSvyKqA84ej0mtIsnlb-YgMGPPTGzuNBLHtuIYM8Ne_kLYtVhJNH3ewU0"/>
+</div>
+<h4 class="font-headline-md text-headline-md mb-1">金色的碎片</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">EPISODE III - FRAGMENTS</p>
+</div>
+<!-- Related Item 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden mb-6">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="An abstract artwork showing flowing organic shapes that mimic smoke or water, rendered in a palette of deep blues and whites. The mood is intellectual and curated, presented as a high-end digital print in a minimalist studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5fqDVh24RALVmqIUBop4FeYaDV9ogipHNNE2POlUaBCmJyT8SRVUG1_Z1_29CXZtdUuDFWjPeKI0qo0aMNi9xVRiHoDID-ABqnzhbQutV5oXN19gAQ-usyIaUQAstgzGH1nYHOLvgyVVAOQBmVCs5ImLbPWGFsjW1MdsRyK5uQScfqp61-zFYjONK7DQ_UAHQSobpIAOggzA5waI8aIMnZzNWjqDl3rU4hycZVtm6ztYNJKA7BGVh8eq35-oE4J5wRGrpjJsJCbw"/>
+</div>
+<h4 class="font-headline-md text-headline-md mb-1">永恒的流动</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">EPISODE IV - FLUX</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-12 max-w-max-width mx-auto space-y-6 md:space-y-0">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="font-headline-md text-on-background tracking-widest">Y. NAKAMURA</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Y. NAKAMURA. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-ink-blue underline transition-all" href="#">ARCHIVE</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-ink-blue underline transition-all" href="#">CONTACT</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-ink-blue underline transition-all" href="#">TERMS</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-ink-blue underline transition-all" href="#">PRIVACY</a>
+</div>
+</div>
+</footer>
+<!-- Mobile Navigation Shell (Suppressed on large screens) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-background border-t border-outline-variant glass-panel">
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-[10px] tracking-tighter">HOME</span>
+</a>
+<a class="flex flex-col items-center justify-center text-ink-blue font-bold" href="#">
+<span class="material-symbols-outlined">palette</span>
+<span class="font-label-sm text-[10px] tracking-tighter">GALLERY</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-label-sm text-[10px] tracking-tighter">SHOP</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined">info</span>
+<span class="font-label-sm text-[10px] tracking-tighter">INFO</span>
+</a>
+</nav>
+<script>
+        let lastScrollTop = 0;
+        const header = document.getElementById('top-app-bar');
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+            }
+            lastScrollTop = scrollTop;
+        });
+
+        // Simple Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('stagger-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body></html>

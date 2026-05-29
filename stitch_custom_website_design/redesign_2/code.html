@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>灵魂的颜色 - Y. NAKAMURA</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;family=EB+Garamond:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#00208b",
+                        "on-secondary-fixed": "#151f00",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#4155bb",
+                        "clay-warmth": "#E8AD6E",
+                        "on-primary-fixed-variant": "#263ca2",
+                        "background": "#fff8f7",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#f7bb7a",
+                        "on-primary-container": "#7c90f9",
+                        "secondary": "#526526",
+                        "surface-bright": "#fff8f7",
+                        "moss-accent": "#C2D98C",
+                        "surface-variant": "#e8e1e1",
+                        "on-surface-variant": "#454652",
+                        "inverse-on-surface": "#f7efef",
+                        "surface-dim": "#e0d8d8",
+                        "inverse-surface": "#332f30",
+                        "on-tertiary-fixed": "#2c1700",
+                        "tertiary-container": "#482800",
+                        "on-error-container": "#93000a",
+                        "on-background": "#1e1b1b",
+                        "secondary-fixed": "#d4ec9d",
+                        "secondary-container": "#d4ec9d",
+                        "surface": "#fff8f7",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#586b2b",
+                        "surface-container-highest": "#e8e1e1",
+                        "outline": "#757684",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#eee6e6",
+                        "on-secondary-fixed-variant": "#3b4d0f",
+                        "primary-fixed": "#dee1ff",
+                        "surface-container-low": "#faf2f2",
+                        "tertiary-fixed": "#ffdcbc",
+                        "on-surface": "#1e1b1b",
+                        "error": "#ba1a1a",
+                        "ink-blue": "#00208B",
+                        "inverse-primary": "#bac3ff",
+                        "primary-fixed-dim": "#bac3ff",
+                        "secondary-fixed-dim": "#b9cf83",
+                        "gallery-white": "#FCF4F4",
+                        "on-tertiary-container": "#c38c50",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#663d06",
+                        "primary": "#001157",
+                        "tertiary": "#2b1600",
+                        "surface-container": "#f4ecec",
+                        "outline-variant": "#c5c5d5",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#001159"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "max-width": "1440px",
+                        "base": "8px",
+                        "margin-mobile": "24px",
+                        "margin-desktop": "80px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["dmSans"],
+                        "headline-lg-mobile": ["ebGaramond"],
+                        "body-md": ["dmSans"],
+                        "body-lg": ["dmSans"],
+                        "headline-md": ["ebGaramond"],
+                        "headline-xl": ["ebGaramond"],
+                        "headline-lg": ["ebGaramond"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                        "headline-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #fff8f7;
+            -webkit-font-smoothing: antialiased;
+        }
+        .canvas-bg {
+            background: radial-gradient(circle at 50% 50%, rgba(255, 248, 247, 0) 0%, rgba(232, 225, 225, 0.2) 100%);
+        }
+        .image-hover-zoom {
+            overflow: hidden;
+        }
+        .image-hover-zoom img {
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .image-hover-zoom:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-max-width mx-auto">
+<div class="flex items-center space-x-4 cursor-pointer hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-ink-blue">menu</span>
+</div>
+<div class="font-headline-md text-headline-md tracking-widest text-on-background">Y. NAKAMURA</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="font-label-sm text-label-sm text-ink-blue border-b border-ink-blue pb-1 transition-colors duration-300" href="#">HOME</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-ink-blue transition-colors duration-300" href="#">GALLERY</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-ink-blue transition-colors duration-300" href="#">PODCAST</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-ink-blue transition-colors duration-300" href="#">INFO</a>
+</div>
+<div class="cursor-pointer transition-opacity hover:opacity-70">
+<span class="font-label-sm text-label-sm text-ink-blue">SHOP</span>
+</div>
+</nav>
+</header>
+<main class="max-w-max-width mx-auto pt-32 pb-40">
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop mb-40">
+<div class="relative w-full aspect-[21/9] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover grayscale-[20%]" data-alt="A serene and ethereal digital art piece with soft fluid gradients of ink blue and clay warmth, resembling a celestial soul scape. The lighting is diffused and overhead, creating a peaceful and high-end museum atmosphere. The composition is minimalist with vast negative space, emphasizing the spiritual depth of the title 'Colors of the Soul' in a curated gallery style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJX1JXQHR8VE2zTFYsok-59iS1z--AQ1QAjTHS807dqPnh38cvSiajZ1-sqBpQRl1mdfCDsPfwI6N3ZP9YBu2KEoy6g9ecaFc87C815u6YyiJ0ekScG5c4Wb1fDN3vxbYHOhScHXMBhOIivJgtoXRnnbpVxcGgUOu2GbZ7G_TCSJC2FDpZl406yAJHaCc65zTRTtALPkn50-BjU9zGZM5CdZyp_wFbDux3GKgDtNGfwS2QHhxmi96F0_zvUknor4QdR8mcidzlWbY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"></div>
+<div class="absolute bottom-12 left-12 md:left-24">
+<h1 class="font-headline-xl text-headline-xl text-on-background max-w-2xl leading-none">
+                        灵魂的颜色
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-4 tracking-wide italic">Colors of the Soul</p>
+</div>
+</div>
+</section>
+<!-- Navigation Hub Grid -->
+<section class="px-margin-mobile md:px-margin-desktop space-y-40">
+<!-- Row 1: Gallery & About -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 group cursor-pointer">
+<div class="image-hover-zoom aspect-[16/10] bg-surface-container mb-6">
+<img class="w-full h-full object-cover" data-alt="A high-contrast architectural shot of a modern minimalist gallery interior. Large white walls are punctuated by subtle linear shadows and a single, large-scale abstract painting in deep ink blue. The floor is a polished, reflective light-mode surface. The overall mood is quiet, sophisticated, and intellectually stimulating, following the Digital Gallery aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqTt_oBgf_lhZWz9IUlZS25m5_9wuSrDSXc6BY7Voo8sVjDvU_qpRWQ6fmhFDItrogBUmOsDbq2nu6rXvfr5heYV0ByCj1MX4QCukE6vrSrnkvOCjLCpt-J1SPTkcs9v5hq49eXz-c44RTH3nySpKjUr6Z9fIPaJC1TlSxw25tq2pOeeVeU3iQEsheuSnKy9-qwC-yi8cQ9uoJQ4r3i01EeLhXVsLMjyOZPH2J3FubP1MbIAqPt2DIh44MhlOSMOZc8LjJVoPeHQs"/>
+</div>
+<div class="flex justify-between items-baseline border-b border-outline-variant pb-4">
+<h2 class="font-headline-md text-headline-md text-on-background">ART GALLERY</h2>
+<span class="font-label-sm text-label-sm text-ink-blue">EXPLORE COLLECTION</span>
+</div>
+</div>
+<div class="md:col-span-4 mt-20 md:mt-40 group cursor-pointer">
+<div class="image-hover-zoom aspect-[3/4] bg-surface-container mb-6">
+<img class="w-full h-full object-cover" data-alt="A moody, close-up portrait of a thoughtful artist in a dimly lit studio. The lighting is dramatic, highlighting textures of skin and linen. The color palette is restricted to warm neutrals and deep shadows, creating a sense of intimacy and intellectual depth. This represents the 'About Me' section with a focus on curated, corporate modern minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXNQ2MKA1gdrYX93qKvg7wDvwLJ7pUbfobEvOekP2xMurpfwOzqas5owa_mgiUpheMF1TrioB6D7EuXWIU74uuX_2Xsws1eKhhin-98bn3Sxe_JaX6SuPXX1TAw11KmReNAolnMGosTNlWnwIBnKEeSammI9uKAfb9wTItzGc9IpaaiNOVz6u4pZXcv4i-IU-UDg36nTt1bCyZIKGvmUHHCe1_2uDww3_1Ab44ok8LxM3NMDySY1IW6a6gVJPM62wh8kfVfvglk1g"/>
+</div>
+<div class="border-b border-outline-variant pb-4">
+<h2 class="font-headline-md text-headline-md text-on-background">ABOUT ME</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">The philosophy behind the brush.</p>
+</div>
+</div>
+</div>
+<!-- Row 2: Publications & Shop -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-5 group cursor-pointer">
+<div class="image-hover-zoom aspect-[4/5] bg-surface-container mb-6">
+<img class="w-full h-full object-cover" data-alt="A meticulously arranged flat lay of minimalist art publications and books on a clean white linen surface. The soft morning light creates long, elegant shadows. The color scheme is dominated by pristine white, with subtle ink blue typography visible on book spines. The atmosphere is quiet, academic, and highly curated, perfect for a high-end art hub." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSP97C1q5oqhVsPNJ3YTv1Z7GtT001m4uzXQ_xk4Q52OQLdP4pOk8qf78xfRo6ElBN6yHI3WQ7IWv7ocE3MMou0wkwYi4AJ9n0O1_bdjHAZPNYoW_gUVdaVnLJiIOUrgKtscTqJcVoTwMwX_ruLUZF5Fflc4zPELkiRxkUJ1aCwVKiVCeTRFoPsrhjoEpkv7Hg1_StAnM6rQdZqK8qRyn1oxwr3fhF5a9hZX6-__7JCWOa3SJkBG3Kcx37ynjPNSnl-3C1jDvh01c"/>
+</div>
+<div class="border-b border-outline-variant pb-4">
+<h2 class="font-headline-md text-headline-md text-on-background">PUBLICATIONS</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Essays on contemporary visual language.</p>
+</div>
+</div>
+<div class="md:col-span-7 flex flex-col justify-center">
+<div class="max-w-md mx-auto text-center md:text-left space-y-8">
+<h2 class="font-headline-lg text-headline-lg text-on-background">A Curated Storefront for the Discerning Collector.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                            Limited edition prints, tactile monographs, and unique digital assets, all crafted with the same rigor as the original works.
+                        </p>
+<div class="pt-4">
+<button class="bg-ink-blue text-gallery-white px-10 py-4 font-label-sm text-label-sm tracking-widest hover:bg-primary-container transition-all">
+                                VISIT SHOP
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Row 3: Podcast (Asymmetric) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter bg-surface-container-low p-12 md:p-24">
+<div class="md:col-span-6 flex items-center">
+<div class="space-y-6">
+<span class="inline-block px-3 py-1 bg-moss-accent/10 text-on-secondary-fixed font-label-sm text-label-sm rounded-full">LATEST EPISODE</span>
+<h2 class="font-headline-xl text-headline-xl text-ink-blue leading-tight">The Resonance of Silence</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                            Episode 42: A dialogue on how negative space defines the soul of modern composition.
+                        </p>
+<div class="flex space-x-6 items-center pt-6">
+<span class="material-symbols-outlined text-4xl text-ink-blue cursor-pointer hover:scale-110 transition-transform">play_circle</span>
+<span class="font-label-sm text-label-sm tracking-widest cursor-pointer hover:text-ink-blue transition-colors">LISTEN TO PODCAST</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-6">
+<div class="image-hover-zoom aspect-square bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="An abstract visualization of sound waves represented as fine, shimmering lines of light on a deep dark canvas. The aesthetic is clean, technical, and artistic, using ink blue and moss accent tones. The lighting is minimal, creating a focused, high-end digital feeling that aligns with a sophisticated art and philosophy podcast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNLExqjY6EkIOE8GOBEK6sSuiQkBUJzv3Z8HXVCX0hjiF_qa1SM3xaRjLTrkWzfbm8LrduUOQ709j-6hYN6jwJyS906R_Y-Hh8WPmEWHndJHWu6FRapk62LiSZKh03f4K0G-pywtakK5BX7RxxLDx9maLfjMcgwmpfpIZtFYhPgEELdqjQ7PSz45Trrtu-NWJ7Otes2tl9XpYDQy9nWCkl9d74oes4evzLutrsIq8CyZgER_3wrgLhBs1AOcMlXHfLQ5iphdoZZWw"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Aesthetic Divider -->
+<div class="mt-40 px-margin-mobile md:px-margin-desktop">
+<div class="w-full h-px bg-outline-variant opacity-30"></div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="mt-40 border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-12 max-w-max-width mx-auto space-y-6 md:space-y-0">
+<div class="font-headline-md text-on-background tracking-widest">Y. NAKAMURA</div>
+<div class="flex space-x-8">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-ink-blue underline transition-all" href="#">ARCHIVE</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-ink-blue underline transition-all" href="#">CONTACT</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-ink-blue underline transition-all" href="#">TERMS</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-ink-blue underline transition-all" href="#">PRIVACY</a>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">
+                © 2024 Y. NAKAMURA. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-background border-t border-outline-variant">
+<div class="flex flex-col items-center justify-center text-ink-blue font-bold cursor-pointer transition-transform scale-95 active:scale-90">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-sm text-label-sm tracking-tighter">HOME</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 cursor-pointer hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">palette</span>
+<span class="font-label-sm text-label-sm tracking-tighter">GALLERY</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 cursor-pointer hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">podcasts</span>
+<span class="font-label-sm text-label-sm tracking-tighter">PODCAST</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 cursor-pointer hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-label-sm text-label-sm tracking-tighter">SHOP</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 cursor-pointer hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">info</span>
+<span class="font-label-sm text-label-sm tracking-tighter">INFO</span>
+</div>
+</nav>
+<!-- Interactive script for reveal on scroll -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.group').forEach(el => {
+                el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+                observer.observe(el);
+            });
+        });
+    </script>
+</body></html>
