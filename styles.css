@@ -905,12 +905,39 @@ h3 {
   padding-top: 18px;
 }
 
-.video-gallery video {
+.video-gallery video,
+.video-gallery .video-poster-link {
   width: 100%;
   aspect-ratio: 16 / 9;
   margin-bottom: 18px;
   background: var(--soft);
   object-fit: cover;
+}
+
+.video-poster-link {
+  display: block;
+  overflow: hidden;
+}
+
+.video-poster-link img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: filter 180ms ease;
+}
+
+.video-poster-link:hover img {
+  filter: brightness(0.88);
+}
+
+.work-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.work-title-link:hover {
+  color: var(--muted);
 }
 
 .video-gallery p {
