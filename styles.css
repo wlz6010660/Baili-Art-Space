@@ -645,6 +645,16 @@ h3 {
   object-fit: cover;
 }
 
+.folder-grid {
+  padding-right: var(--side);
+  padding-bottom: clamp(90px, 12vw, 170px);
+  padding-left: var(--side);
+}
+
+.folder-card img {
+  aspect-ratio: 4 / 5;
+}
+
 .sub-category {
   margin-top: 64px;
   padding-top: 26px;
@@ -949,6 +959,18 @@ h3 {
 }
 
 .student-gallery img {
+  max-height: 620px;
+}
+
+.illustration-gallery img {
+  max-height: 720px;
+}
+
+.illustration-gallery h3 {
+  font-size: clamp(22px, 2.2vw, 32px);
+}
+
+.qintang-gallery img {
   max-height: 620px;
 }
 
