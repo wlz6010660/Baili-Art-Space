@@ -509,6 +509,7 @@ h3 {
   grid-row: 1 / span 3;
   aspect-ratio: 16 / 10;
   margin-bottom: 0;
+  object-position: 52% 38%;
 }
 
 .home-entry-card-hero {
@@ -1440,6 +1441,17 @@ h3 {
   .home-entry-card,
   .home-entry-card-wide {
     grid-column: span 1;
+  }
+
+  .home-entry-card-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .home-entry-card-feature img {
+    grid-row: auto;
+    aspect-ratio: 4 / 5;
+    margin-bottom: 18px;
+    object-position: 52% 34%;
   }
 
   .splash-meta {
