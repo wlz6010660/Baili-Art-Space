@@ -1080,6 +1080,32 @@ h3 {
   object-fit: contain;
 }
 
+.about-feature {
+  grid-template-columns: minmax(0, 0.78fr) minmax(320px, 0.62fr);
+  align-items: end;
+}
+
+.about-feature img {
+  max-height: 86vh;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: 52% 42%;
+}
+
+.about-feature > div {
+  border-top: 1px solid var(--ink);
+  padding-top: 24px;
+  padding-bottom: clamp(12px, 4vw, 58px);
+}
+
+.about-feature h2 {
+  max-width: 620px;
+}
+
+.about-feature p:not(.label) {
+  max-width: 640px;
+}
+
 .artifact-gallery {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
