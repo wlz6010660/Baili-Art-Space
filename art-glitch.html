@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>故障艺术 | 百里绘画作品</title>
+    <meta name="description" content="百里绘画作品中的故障艺术系列展示，收录 18 张作品及对应设计灵感。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=glitch-20260611" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html#top" aria-label="回到首页">
+          <span>BAILI</span>
+          <small>Colors of the Soul</small>
+        </a>
+        <nav class="nav" aria-label="故障艺术页导航">
+          <a href="art-gallery.html">ART GALLERY</a>
+          <a href="art-yoga-sanskrit.html">YOGA</a>
+          <a href="art-doudou-travel.html">DOUDOU</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="series-hero">
+          <div>
+            <p class="label">ART GALLERY / GLITCH ART</p>
+            <h1>故障艺术</h1>
+          </div>
+          <p>
+            这一组作品把人物、风景、日常器物和故乡记忆放进跳动的色点里，让传统图像、生活片段和数字噪点在同一张画面中相遇。
+          </p>
+        </section>
+
+        <section class="series-feature">
+          <img src="assets/illustrations/glitch-art/雪中的歌声.jpg" alt="故障艺术系列主视觉" />
+          <div>
+            <p class="label">18 WORKS</p>
+            <h2>在噪点里看见记忆的光</h2>
+            <p>
+              每张作品都整理了图片、设计灵感、作品故事和一句话。点击任意作品，可以进入独立详情页阅读完整文字。
+            </p>
+            <a class="text-link" href="art-gallery.html">返回绘画作品分类</a>
+          </div>
+        </section>
+
+        <section class="artifact-gallery illustration-gallery glitch-gallery" aria-label="故障艺术系列作品" data-glitch-gallery></section>
+      </main>
+
+      <footer class="site-footer">
+        <span>© 2026 百里 / 故障艺术</span>
+        <a href="art-gallery.html">返回绘画作品分类</a>
+      </footer>
+    </div>
+
+    <script src="assets/illustrations/glitch-art/glitch-art-data.js"></script>
+    <script>
+      const gallery = document.querySelector("[data-glitch-gallery]");
+
+      window.glitchArtWorks.forEach((work, index) => {
+        const item = document.createElement("article");
+        item.className = "glitch-card";
+        item.innerHTML = `
+          <a class="glitch-card-link" href="art-glitch-detail.html?work=${work.slug}">
+            <img src="${work.image}" alt="${work.title}" loading="lazy" />
+            <p class="label">GLITCH ART / ${String(index + 1).padStart(2, "0")}</p>
+            <h3>${work.title}</h3>
+            <p>${work.quote}</p>
+          </a>
+        `;
+        gallery.appendChild(item);
+      });
+    </script>
+  </body>
+</html>
