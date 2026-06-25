@@ -1215,10 +1215,23 @@ h3 {
   margin-top: 8px;
 }
 
-.meditation-chapters img {
+.meditation-chapters figure {
   width: min(100%, 760px);
+  margin: 0;
+}
+
+.meditation-chapters img {
+  width: 100%;
   background: var(--soft);
   object-fit: contain;
+}
+
+.meditation-chapters figcaption {
+  max-width: 720px;
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: clamp(16px, 1.35vw, 19px);
+  line-height: 1.72;
 }
 
 .artifact-gallery {
