@@ -1044,6 +1044,15 @@ h3 {
   font-weight: 400;
 }
 
+.topic-grid strong a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.topic-grid strong a:hover {
+  color: var(--muted);
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -1120,6 +1129,96 @@ h3 {
 
 .about-feature p:not(.label) {
   max-width: 640px;
+}
+
+.meditation-hero p:not(.label) {
+  max-width: 540px;
+}
+
+.meditation-book,
+.meditation-intro,
+.meditation-chapters {
+  padding-right: var(--side);
+  padding-left: var(--side);
+}
+
+.meditation-book {
+  display: grid;
+  gap: clamp(26px, 4vw, 54px);
+  padding-bottom: clamp(70px, 9vw, 128px);
+}
+
+.meditation-book figure {
+  margin: 0;
+}
+
+.meditation-book img {
+  width: min(100%, 520px);
+  margin: 0 auto;
+  background: var(--soft);
+  object-fit: contain;
+}
+
+.meditation-book > div {
+  max-width: 900px;
+  border-top: 1px solid var(--ink);
+  padding-top: clamp(22px, 3vw, 34px);
+}
+
+.meditation-book p:not(.label),
+.meditation-intro p {
+  color: var(--muted);
+  font-size: clamp(18px, 1.7vw, 23px);
+  line-height: 1.82;
+}
+
+.meditation-book .text-link {
+  display: inline-block;
+  margin-top: 18px;
+}
+
+.meditation-intro {
+  padding-top: clamp(42px, 6vw, 82px);
+  padding-bottom: clamp(58px, 8vw, 112px);
+  border-top: 1px solid var(--line);
+}
+
+.meditation-intro p {
+  max-width: 940px;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(28px, 4vw, 58px);
+  line-height: 1.28;
+}
+
+.meditation-chapters {
+  display: grid;
+  gap: clamp(66px, 9vw, 140px);
+  padding-bottom: clamp(90px, 12vw, 170px);
+}
+
+.meditation-chapters article {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.34fr) minmax(0, 0.66fr);
+  gap: clamp(26px, 5vw, 76px);
+  align-items: start;
+  border-top: 1px solid var(--line);
+  padding-top: clamp(22px, 3vw, 34px);
+}
+
+.meditation-chapters article > div {
+  position: sticky;
+  top: 110px;
+}
+
+.meditation-chapters h2 {
+  margin-top: 8px;
+}
+
+.meditation-chapters img {
+  width: min(100%, 760px);
+  background: var(--soft);
+  object-fit: contain;
 }
 
 .artifact-gallery {
